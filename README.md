@@ -37,5 +37,5 @@ $genAvatar->generate($outputSize, $backgroundHex, $foregroundHex);
 | foregroundColor | Hex Color | #ffd001 | The foreground color of the GenAvatar                                                                        |
 
 ### License
-This project is licensed under the MIT License. To read the license, click (here)[LICENSE.md].  
-For a simple explaination what you can and cannot do, click (here)[tldrlegal.com/license/mit-license]
+This project is licensed under the MIT License. To read the license, click [here](LICENSE.md).  
+For a simple explaination what you can and cannot do, click [here](tldrlegal.com/license/mit-license)

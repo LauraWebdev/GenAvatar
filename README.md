@@ -1,8 +1,14 @@
 # GenAvatar
 ## A simple recreation of GitHubs random avatars
+### Introduction
 
 This is a simple PHP library that recreates the random avatars GitHub creates for every user.
 It uses a seed for the generation and has various settings.
+
+### Pronounciation
+```
+/ˈdʒɛn æv.ə.tɑɹ/
+```
 
 ### Usage
 

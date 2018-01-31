@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GenAvatar Test</title>
+  </head>
+  <body>
+    <input type="text" class="inputText" placeholder="Name" />
+    <input type="submit" class="inputSubmit" value="Send" />
+    <input type="color" class="inputColor1" value="#ffffff" />
+    <input type="color" class="inputColor2" value="#f9a51b" />
+    <input type="range" min="16" max="512" class="inputSize" value="128" />
+    <hr />
+
+    <img src="" />
+
+    <script>
+      let inputText = document.querySelector(".inputText");
+      let inputSubmit = document.querySelector(".inputSubmit");
+      let inputColor1 = document.querySelector(".inputColor1");
+      let inputColor2 = document.querySelector(".inputColor2");
+      let inputSize = document.querySelector(".inputSize");
+
+      let image = document.querySelector("img");
+
+      inputSubmit.addEventListener('click', function() {
+        var hash = inputText.value;
+        var color1 = inputColor1.value.replace('#', '');
+        var color2 = inputColor2.value.replace('#', '');
+        var size = inputSize.value;
+
+        image.src = "http://localhost/tests/genAvatar/generate.php?hash=" + hash + "&color1=" + color1 + "&color2=" + color2 + "&size=" + size;
+      });
+    </script>
+  </body>
+</html>

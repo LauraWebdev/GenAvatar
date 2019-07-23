@@ -10,6 +10,7 @@
     <input type="color" class="inputColor1" value="#ffffff" />
     <input type="color" class="inputColor2" value="#f9a51b" />
     <input type="range" min="16" max="512" class="inputSize" value="128" />
+    <input type="range" min="1" max="32" class="inputPatternSize" value="8" />
     <hr />
 
     <img src="" />
@@ -21,6 +22,7 @@
       let inputColor1 = document.querySelector(".inputColor1");
       let inputColor2 = document.querySelector(".inputColor2");
       let inputSize = document.querySelector(".inputSize");
+      let inputPatternSize = document.querySelector(".inputPatternSize");
 
       let image = document.querySelector("img");
 
@@ -31,9 +33,10 @@
         var color1 = inputColor1.value.replace('#', '');
         var color2 = inputColor2.value.replace('#', '');
         var size = inputSize.value;
+        var patternSize = inputPatternSize.value;
 
         // Change image src to a preset link with the options as GET parameters
-        image.src = "generate.php?hash=" + hash + "&color1=" + color1 + "&color2=" + color2 + "&size=" + size;
+        image.src = "generate.php?hash=" + hash + "&color1=" + color1 + "&color2=" + color2 + "&size=" + size + "&patternSize=" + patternSize;
       });
     </script>
   </body>

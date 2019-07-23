@@ -15,7 +15,7 @@
   $ga = new GenAvatar($hash);
 
   # generate and return a GenAvatar if color1, colo2 and size are set
-  if(isset($_GET['color1']) && isset($_GET['color2']) && isset($_GET['size'])) {
-    echo $ga->generate($_GET['size'], $_GET['color1'], $_GET['color2']);
+  if(isset($_GET['color1']) && isset($_GET['color2']) && isset($_GET['size']) && isset($_GET['patternSize'])) {
+    echo $ga->generate($_GET['size'], $_GET['color1'], $_GET['color2'], $_GET['patternSize']);
   }
 ?>

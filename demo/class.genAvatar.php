@@ -9,7 +9,8 @@
       $this->hash = $hash;
     }
 
-    function generate($size, $colorOne, $colorTwo) {
+    function generate($size, $colorOne, $colorTwo, $patternSize = 8) {
+	  $this->patternSize = $patternSize;
       $this->image = @imagecreate($size, $size);
       $pattern = @imagecreate($this->patternSize, $this->patternSize);
 

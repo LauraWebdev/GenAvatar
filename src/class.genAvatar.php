@@ -10,7 +10,7 @@
     }
 
     function generate($size, $colorOne, $colorTwo) {
-      $image = @imagecreate($size, $size);
+      $this->image = @imagecreate($size, $size);
       $pattern = @imagecreate($this->patternSize, $this->patternSize);
 
       # Convert hex color codes to rgb arrays
@@ -35,10 +35,10 @@
       }
 
       # resize the finished canvas to the needed width/height
-      imagecopyresampled($image, $pattern, 0,0,0,0,$size, $size, $this->patternSize, $this->patternSize);
+      imagecopyresampled($this->image, $pattern, 0,0,0,0,$size, $size, $this->patternSize, $this->patternSize);
 
       # return the image data
-      return imagepng($image);
+      return imagepng($this->image);
     }
 
     # function to convert hex colors to rgb arrays

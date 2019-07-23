@@ -24,6 +24,9 @@ $ga = new GenAvatar('github');
 
 // Output the image content
 echo $ga->generate(128, "#ffffff", "#ffd001");
+
+// Output the image content of a smaller pattern
+echo $ga->generate(128, "#ffffff", "#ffd001", 16);
 ```
 
 ### Functions
@@ -33,14 +36,17 @@ Generates a GenAvatar
 
 ```
 $genAvatar->generate($outputSize, $backgroundHex, $foregroundHex);
+
+$genAvatar->generate($outputSize, $backgroundHex, $foregroundHex, $patternSize);
 ```
 
 #### Parameters
-| Parameter       | Type      | Example | Explaination                                                                                                 |
-| --------------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------ |
-| size            | integer   | 128     | Output size of the image. Keep in mind, that the GenAvatar always has a pattern size of 8 and gets upsampled |
-| backgroundColor | Hex Color | #ffffff | The background color of the GenAvatar                                                                        |
-| foregroundColor | Hex Color | #ffd001 | The foreground color of the GenAvatar                                                                        |
+| Parameter       | Type      | Example | Explaination                                           |
+| --------------- | --------- | ------- | ------------------------------------------------------ |
+| size            | integer   | 128     | Output size of the image.                              |
+| backgroundColor | Hex Color | #ffffff | The background color of the GenAvatar                  |
+| foregroundColor | Hex Color | #ffd001 | The foreground color of the GenAvatar                  |
+| patternSize     | integer   | 8       | The pattern size used for the generation. Default is 8 |
 
 ### License
 This project is licensed under the MIT License. To read the license, click [here](LICENSE.md).  
